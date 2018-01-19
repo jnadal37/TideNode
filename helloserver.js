@@ -1,4 +1,6 @@
-http.createServer(function (request, response) {
+var http = require('http');
+
+var server = http.createServer(function (request, response) {
 
     // Send the HTTP header
     // HTTP Status: 200 : OK
