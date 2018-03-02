@@ -3,7 +3,7 @@ var http = require('http');
 /*
     issues with current jquery being able to use current jsdom. jsdom broke integration.
  */
-const jsdom = require('jsdom/lib/old-api');
+//const jsdom = require('jsdom/lib/old-api');
 
 /**********VARS**********************/
 var dataFile = "./tidedata.txt";
@@ -31,7 +31,7 @@ jsdom.env("", function(err, window) {
         console.error(err);
         return;
     }
-    $ = require("jquery")(window);
+    //$ = require("jquery")(window);
     //$("<h1>test passes</h1>").appendTo("body");
     //console.log($("body").html());
 });
