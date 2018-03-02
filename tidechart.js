@@ -7,7 +7,7 @@ var http = require('http');
 
 /**********VARS**********************/
 var dataFile = "./tidedata.txt";
-var $;
+//var $;
 var isCompletedParsing = false;
 
 /*********ENTITIES*******************/
@@ -26,15 +26,15 @@ var context = {
 
 
 //WIRE UP JQUERY:
-jsdom.env("", function(err, window) {
-    if (err) {
-        console.error(err);
-        return;
-    }
-    //$ = require("jquery")(window);
+//jsdom.env("", function(err, window) {
+//    if (err) {
+//        console.error(err);
+//        return;
+//    }
+//    $ = require("jquery")(window);
     //$("<h1>test passes</h1>").appendTo("body");
     //console.log($("body").html());
-});
+//});
 
 /***************HELPER FUNCTIONS*********************/
 function pad (str, max, whichChar) {
