@@ -128,7 +128,7 @@ if (lines.length == 0){
 }
 
 http.createServer(function (request, response) {
-
+    console.log("REFRESH TIME");
     console.log('wait for file read complete.');
     while (!isCompletedParsing){
     //block until file is complete.
@@ -166,9 +166,12 @@ http.createServer(function (request, response) {
     // Content Type: text/plain
     response.writeHead(200, {'Content-Type': 'text/HTML'});
 
-    var body = '<html><body>Tide Chart for '+todayDisplayString+'\n';
+    var body = '<html><head><meta http-equiv="refresh" content="30" /></head><body>Tide Chart for '+todayDisplayString+'\n';
 
-    //autorefresh javascript goes here...
+    //autorefresh javascript goes here... (try out the meta version)
+
+    //body += '<script type="text/javascript">';
+    //body += '</script>';
 
     body += "<br/><pre>";
     for (var curLineIndex=0;curLineIndex<lines.length;curLineIndex++){
