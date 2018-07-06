@@ -184,7 +184,7 @@ http.createServer(function (request, response) {
     //body += '<script type="text/javascript">';
     //body += '</script>';
 
-    body += "<br/><pre>";
+    body += "<br/><pre><span style='font-size: 35px'>";
     for (var curLineIndex=0;curLineIndex<lines.length;curLineIndex++){
         var curLine = lines[curLineIndex];
         console.log(curLine);
@@ -193,7 +193,6 @@ http.createServer(function (request, response) {
         body += "<br/>";
     }
 
-
     //weather widget
 
     body += "<div style='width: 210px;'><iframe style='display: block;' src='https://cdnres.willyweather.com/widget/loadView.html?id=91277' width='210' height='62' frameborder='0' scrolling='no'></iframe><a style='text-indent: -9999em;position: relative;z-index: 1;height: 20px;display: block;margin: -20px 0 0 0' href='https://www.willyweather.com/nj/monmouth-county/port-monmouth.html' rel='nofollow'>https://www.willyweather.com/nj/monmouth-county/port-monmouth.html</a></div>";
@@ -201,7 +200,7 @@ http.createServer(function (request, response) {
 
 
 
-    body += "</pre></body></html>";
+    body += "</span></pre></body></html>";
     // Send the response body as "Hello World"
     response.write(body);
 
