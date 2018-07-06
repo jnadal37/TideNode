@@ -184,7 +184,7 @@ http.createServer(function (request, response) {
     //body += '<script type="text/javascript">';
     //body += '</script>';
 
-    body += "<br/><pre>";
+    body += "<br/><pre><span style='font-size: 35px'>";
     for (var curLineIndex=0;curLineIndex<lines.length;curLineIndex++){
         var curLine = lines[curLineIndex];
         console.log(curLine);
@@ -201,7 +201,7 @@ http.createServer(function (request, response) {
 
 
 
-    body += "</pre></body></html>";
+    body += "</span></pre></body></html>";
     // Send the response body as "Hello World"
     response.write(body);
 
