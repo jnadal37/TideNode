@@ -168,6 +168,17 @@ http.createServer(function (request, response) {
 
     var body = '<html><head><meta http-equiv="refresh" content="30" /></head><body>Tide Chart for '+todayDisplayString+'\n';
 
+    //add in styles
+    body +=
+        '<style> \n'+
+        'html {\n'+
+        ' background-color: #000000; \n'+
+        ' color: #ffffff; \n';
+        '} \n'+
+        '</style>';
+
+
+
     //autorefresh javascript goes here... (try out the meta version)
 
     //body += '<script type="text/javascript">';
@@ -181,6 +192,15 @@ http.createServer(function (request, response) {
         body += lineDisplay;
         body += "<br/>";
     }
+
+
+    //weather widget
+
+    body += "<div style='width: 210px;'><iframe style='display: block;' src='https://cdnres.willyweather.com/widget/loadView.html?id=91277' width='210' height='62' frameborder='0' scrolling='no'></iframe><a style='text-indent: -9999em;position: relative;z-index: 1;height: 20px;display: block;margin: -20px 0 0 0' href='https://www.willyweather.com/nj/monmouth-county/port-monmouth.html' rel='nofollow'>https://www.willyweather.com/nj/monmouth-county/port-monmouth.html</a></div>";
+
+
+
+
     body += "</pre></body></html>";
     // Send the response body as "Hello World"
     response.write(body);
