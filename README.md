@@ -1,9 +1,27 @@
-
 # TideNode
 Node.JS Application to see current tide information
 
 
+# how to kill the already running process:
+
+
+sudo netstat -lpn |grep :'8081'
+8081 is port i was looking for, After first command you will have Process ID for that port
+
+kill -9 1192
+in my case 1192 was process Id of process running on 8081 PORT use -9 for Force kill the process
+
+
+#how to install/update the app
+
+
 from /usr/src/
+    (first kill old version:
+
+    sudo rm -r TideNode/
+    )
+
+
 	sudo git clone https://github.com/jnadal37/TideNode.git
 
 from /usr/src/TideNode/
@@ -11,6 +29,19 @@ from /usr/src/TideNode/
 
 from web browser:
 	http://localhost:8081
+
+to remove:
+from /usr/src/
+    sudo rm -r TodeNode/
+
+to reboot:
+    sudo reboot
+
+autostart set up in
+
+
+
+
 
 ## Welcome to GitHub Pages
 
