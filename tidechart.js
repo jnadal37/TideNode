@@ -81,7 +81,7 @@ function parseLine(line){
 var todayString = "";
 var todayDisplayString = "";
 function setTodayString(){
-    if (todayString==""){
+
         var today = new Date();
         todayString = today.getFullYear().toString()+
         "/"+
@@ -93,7 +93,7 @@ function setTodayString(){
         todayDisplayString = (today.getMonth()+1).toString()+"/"+
             today.getDate().toString()+"/"+
             today.getFullYear().toString();
-    }
+
 }
 
 
